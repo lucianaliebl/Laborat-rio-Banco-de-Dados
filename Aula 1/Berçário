@@ -1,0 +1,40 @@
+create database Berçário
+default character set utf8
+default collate utf8_general_ci; 
+
+create table bebê (
+   id int not null auto_increment,
+   nome varchar(30) not null,
+   nascimento date,
+   peso decimal (5,2),
+   altura decimal (3,2),
+   mãe varchar(30) not null,
+   médico varchar(30) not null,
+   primary key (id)
+) default charset = utf8; 
+
+create table mãe (
+   id int not null auto_increment, 
+   nome varchar(30) not null, 
+   endereço varchar(30) not null,
+   telefone int,
+   email varchar(30) not null,
+   nascimento_mãe date, 
+   primary key (id)
+) default charset = utf8;
+
+create table médico (
+  CRM int not null,
+  nome varchar(30) not null, 
+  especialidade varchar(30) not null,
+  telefone int,
+  primary key (CRM)
+)default charset = utf8; 
+  
+insert into bebê
+(id, nome, nascimento, peso, altura, mãe, médico)
+values
+(default, 'Enzo', '2024-04-01', '2.8', '0.60', 'Maria Joaquina', 'João Marcelo');
+  
+select * from bebê;
+  
