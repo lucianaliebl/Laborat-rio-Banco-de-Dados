@@ -1,0 +1,41 @@
+create database industria
+default character set utf8
+default collate utf8_general_ci;
+
+create table pecas(
+   numero int not null auto_increment,
+   peso decimal (5,2),
+   cor varchar(15) not null,
+   primary key (numero)
+) default charset = utf8;
+
+create table deposito(
+   numero_deposito int not null auto_increment,
+   endereço varchar(30) not null,
+   primary key (numero_deposito)
+) default charset = utf8;
+
+create table fornecedor(
+   numero_fornecedor int not null auto_increment,
+   endereço varchar(30) not null,
+   primary key (numero_fornecedor)
+) default charset = utf8;
+
+create table projeto(
+   numero_projeto int not null auto_increment,
+   orcamento decimal (9,2),
+   primary key (numero_projeto)
+) default charset = utf8;
+
+create table funcionario(
+   numero_funcionario int not null auto_increment,
+   salario_funcionario decimal (9,2),
+   telefone varchar(20) not null,
+   primary key (numero_funcionario)
+) default charset = utf8;
+
+create table departamento(
+   numero_departamento int not null auto_increment,
+   setor varchar(30) not null,
+   primary key (numero_departamento)
+) default charset = utf8;
