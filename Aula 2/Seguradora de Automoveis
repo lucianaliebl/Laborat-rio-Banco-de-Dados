@@ -1,0 +1,27 @@
+create database Seguradora_de_Automoveis
+default character set utf8
+default collate utf8_general_ci;
+
+create table cliente(
+   numero int not null auto_increment,
+   nome varchar(30) not null,
+   endereço varchar(30) not null,
+   primary key (numero)
+) default charset = utf8; 
+
+create table apolice(
+   numero int not null auto_increment,
+   valor decimal (8,2),
+   primary key (numero)
+) default charset = utf8; 
+
+create table carro(
+   registro varchar(30), 
+   marca varchar(30) not null
+) default charset = utf8; 
+
+create table acidente(
+   data_acidente date, 
+   hora_acidente time,
+   local_acidente varchar(30)
+) default charset = utf8;
