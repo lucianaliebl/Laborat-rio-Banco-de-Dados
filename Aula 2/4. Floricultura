@@ -1,0 +1,34 @@
+create database floricultura
+default character set utf8
+default collate utf8_general_ci;
+
+create table cliente(
+  numero int not null auto_increment,
+  nome_cliente varchar(30) not null,
+  rg_cliente varchar(10) not null,
+  telefone_cliente varchar(10) not null,
+  endereço_cliente varchar(10),
+  primary key (numero)
+) default charset = utf8; 
+
+describe cliente;
+
+create table produtos(
+  codigo_produto int not null auto_increment,
+  nome_produto varchar(30) not null,
+  tipo_produto varchar(20) not null,
+  valor_produto decimal(8,2), 
+  qtd_produto_estoque int,
+  primary key(codigo_produto)
+) default charset = utf8;
+
+describe produtos;
+
+create table compra(
+   codigo_compra int not null auto_increment,
+   data_compra date,
+   valor_total_compra decimal(6,2),
+   primary key(codigo_compra)
+) default charset = utf8; 
+
+describe compra;
