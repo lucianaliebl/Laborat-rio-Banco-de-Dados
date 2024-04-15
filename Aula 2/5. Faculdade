@@ -1,0 +1,44 @@
+create database faculdade
+default character set utf8
+default collate utf8_general_ci; 
+
+create table turma(
+  codigo_turma int not null auto_increment,
+  horario_turma time,
+  primary key(codigo_turma)
+) default charset = utf8; 
+
+describe turma;
+
+create table professor(
+  codigo_professor int not null auto_increment,
+  nome_professor varchar(30) not null,
+  primary key (codigo_professor)
+) default charset = utf8; 
+
+describe professor;
+
+create table disciplina(
+   codigo_disciplina int not null auto_increment,
+   nome_disciplina varchar(20) not null,
+   horario_disciplina time,
+   primary key (codigo_disciplina)
+) default charset = utf8;
+
+describe disciplina;
+
+create table sala(
+   codigo_sala int not null auto_increment,
+   local_sala varchar(20),
+   primary key (codigo_sala)
+) default charset = utf8;
+
+describe sala;
+
+create table aluno(
+   codigo_aluno int not null auto_increment,
+   nome_aluno varchar(30),
+   primary key (codigo_aluno)
+) default charset = utf8;
+
+describe sala;
