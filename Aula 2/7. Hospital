@@ -1,0 +1,46 @@
+create database hospital
+default character set utf8
+default collate utf8_general_ci;
+
+create table medico(
+  crm varchar(10) not null,
+  nome_medico varchar(30) not null,
+  telefone varchar(15),
+  email varchar(20),
+  primary key (crm)
+) default charset = utf8;
+
+create table paciente(
+  cpf varchar(20) not null,
+  nome_paciente varchar(30) not null,
+  endereço_paciente varchar(20),
+  telefone_paciente varchar(20),
+  plano_de_saude varchar(30),
+  primary key (cpf)
+) default charset = utf8;
+
+create table consulta(
+  codigo_consulta int not null auto_increment,
+  nome_medico varchar(30) not null,
+  nome_paciente varchar(30) not null,
+  horario_consulta time,
+  tipo_consulta varchar(20),
+  medicamentos_consulta varchar(50),
+  exames_consulta varchar(50),
+  primary key (codigo_consulta)
+) default charset = utf8;
+
+create table medicamentos(
+  codigo_medicamento int not null auto_increment,
+  nome_medicamento varchar(30) not null,
+  tipo_medicamento varchar(30),
+  dosagem_medicamento varchar(30),
+  uso_medicamento varchar(50),
+  primary key (codigo_medicamento)
+) default charset = utf8;
+
+create table exames(
+  codigo_exame int not null auto_increment,
+  nome_exame varchar(30) not null, 
+  
+)
