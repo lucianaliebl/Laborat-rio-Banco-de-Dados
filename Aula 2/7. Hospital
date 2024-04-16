@@ -23,6 +23,7 @@ create table consulta(
   codigo_consulta int not null auto_increment,
   nome_medico varchar(30) not null,
   nome_paciente varchar(30) not null,
+  data_consulta date,
   horario_consulta time,
   tipo_consulta varchar(20),
   medicamentos_consulta varchar(50),
@@ -42,5 +43,7 @@ create table medicamentos(
 create table exames(
   codigo_exame int not null auto_increment,
   nome_exame varchar(30) not null, 
-  
-)
+  obs_exame varchar(50), 
+  resultado_exame varchar(30),
+  primary key (codigo_exame)
+) default charset = utf8;
